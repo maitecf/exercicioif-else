@@ -59,21 +59,38 @@ fun atividade3():Unit{
 }
 
 fun atividade4():Unit {
-    println("Digite quantos litros quer abastecer")
-    println("Digite A para álcool e G para gasolina")
-    val alcool = readLine()!!.toString()
-    val gasolina = readLine()!!.toString()
-    val litros = readLine()!!.toFloat()
-    var precoA = readLine()!!.toFloat()
-    var precoG = readLine()!!.toFloat()
-    val preco = readLine()!!.toInt()
-    if (alcool == "A") precoA = litros * 4.5f;
-    if (litros <= 20) precoA -= 4.5f * litros * 3 / 100
-    else (litros >= 20); litros * 5 / 100
-    if (gasolina == "G") precoG = litros * 6.9f
-    if (litros <= 20) precoG -= 6.9f * litros * 4 / 100
-    else (litros >= 20); litros * 6 / 100
-    println("O preco a pagar é R${preco}2.f}")
+    println("Tipo de combustivel? :")
+    var a = readLine()!!.toFloat()
+    var g = readLine()!!.toFloat()
+    var combustivel = readLine()!!.toFloat()
+    println("Quantos litros ? :: ")
+    var litro = readLine()!!.toFloat()
+    var desconto1 = readLine()!!.toFloat()
+    var desconto2 = readLine()!!.toFloat()
+    var desconto3 = readLine()!!.toFloat()
+    var desconto4 = readLine()!!.toFloat()
+    var custo = readLine()!!.toFloat()
+    var gasolina = readLine()!!.toFloat()
+
+    if ((combustivel == a) && (litro <= 20) && (custo == 3.5F))
+        desconto1 = (custo * 3) / 100
+
+    println("Desconto do Combustivel")
+
+    // 3.5 PREÇO DO ALCOOL
+
+      if ((combustivel== a) && (litro >= 20 ) && (custo == 4.6F))
+            desconto2 = (custo * 5) / 100
+
+    println("Desconto de Combustivel")
+
+    // 4.6 PREÇO Do ALCOOL
+
+             if  ((combustivel == g ) && (litro<=20 ) && (custo==5.3F))
+                  desconto3 = (custo * 4)/100
+
+    else ((combustivel == g) && (litro>=20) && (custo==5.6F))
+        desconto4 = (custo * 6) / 100
 }
 
 
